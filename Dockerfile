@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:11-jdk-alpine
 ARG JAR_FILE=target/original-gs-maven-0.1.0.jar
 ARG JAR_LIB_FILE=target/lib/
 
