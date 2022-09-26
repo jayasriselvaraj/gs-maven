@@ -6,8 +6,8 @@ WORKDIR /usr/local/tomcat
 ADD https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.82/bin/apache-tomcat-8.5.82.tar.gz .
 RUN tar -xvzf apache-tomcat-8.5.82.tar.gz
 RUN mv apache-tomcat-8.5.82/* /usr/local/tomcat
-ARG JAR_FILE=target/original-gs-maven-0.1.0.jar
-COPY target/*.jar /usr/local/tomcat/
+#ARG JAR_FILE=target/original-gs-maven-0.1.0.jar
+ADD webapp.war /usr/loca/tomcat/webapps/
 
 EXPOSE 8080
 CMD ["/usr/local/tomcat/bin/catalina.sh","run"]
